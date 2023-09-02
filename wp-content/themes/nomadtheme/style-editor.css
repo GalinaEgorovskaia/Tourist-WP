@@ -1,0 +1,19 @@
+.wp-block-button__link{
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #FF6056;
+    padding: 8px 48px;
+    font-size: 1.25rem;
+    border-radius: 5%;
+    letter-spacing: 2px;
+}
+
+.wp-block-quote.is-style-default{
+    border-left: 5px solid #FF6056;
+    padding-left: 8px;
+}
+
+.wp-block-quote.is-style-default p{
+    font-size: 1.25rem;
+}
