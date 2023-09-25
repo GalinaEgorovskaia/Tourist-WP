@@ -19,7 +19,13 @@ function nomadtheme_scripts() {
 
 	wp_register_script( 'nomadtheme-ajax', get_template_directory_uri() . '/assets/js/ajax-filter.js');
 
-	wp_localize_script( 'nomadtheme-ajax', 'nomadtheme_ajax_params', array('ajaxurl' => site_url() . '/wp-admin/admin-ajax.php'));
+	global $wp_query;
+	wp_localize_script( 'nomadtheme-ajax', 'nomadtheme_ajax_params', array(
+		'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php',
+		'posts' => json_encode($wp_query->query_vars),
+		'current_page' => $wp_query->query_vars['paged'] ? $wp_query->query_vars['paged'] : 1,
+		'max_page' => $wp_query->max_num_pages
+	));
 
 	if( is_post_type_archive( 'trip' )){
 		wp_enqueue_script( 'nomadtheme-ajax');
