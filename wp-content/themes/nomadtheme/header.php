@@ -21,20 +21,22 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+
 <div id="page" class="site">
 
 	<header id="masthead" class="header-main site-header <?php if( !is_front_page()) echo 'header-position'; ?>">
 		<div class="logo"><a href="/"><img src="<?php echo carbon_get_theme_option( 'crb_logo_black' ); ?>" alt="Логотип"></a></div>
 		<div class="main-menu">
-			<?php
+			<?php /*
 				wp_nav_menu( [
 					'theme_location'  => 'top-menu',
 					'container'       => 'nav',
-					'container_class' => 'destkop-menu',
+					'container_class' => 'desktop-menu',
 					'menu_class'      => '',
 				] );
+				*/
 			?>
+			<?php get_search_form();?>
 			<a href="#" class="hamburger hamburger--slider">
 				<span class="hamburger-box">
 					<span class="hamburger-inner"></span>
@@ -47,7 +49,7 @@
 			'theme_location'  => 'main-menu',
 			'container'       => 'div',
 			'container_class' => 'mobile-menu',
-			'menu_class'      => '',
+			'menu_class'      => 'm-menu',
 		] );			
 	?>
 

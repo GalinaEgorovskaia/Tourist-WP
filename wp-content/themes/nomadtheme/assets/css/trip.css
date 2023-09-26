@@ -71,3 +71,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
+#searchform{
+    margin-right: 24px;
+}
