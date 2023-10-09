@@ -48,6 +48,8 @@ require get_template_directory() . '/inc/nomad-post-and-tax.php';
 
 require get_template_directory() . '/inc/ajax-filters.php';
 
+require get_template_directory() . '/inc/widget-trips.php';
+
 add_filter('get_the_archive_title', 'change_archive_trip_title');
 function change_archive_trip_title( $title ){
 	if( is_post_type_archive('trip')){

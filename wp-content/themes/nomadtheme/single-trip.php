@@ -35,6 +35,10 @@ get_header();
 
 	</main><!-- #main -->
 
+	<aside id="secondary" class="widget-area">
+		<?php dynamic_sidebar( 'sidebar-trip' ); ?>
+	</aside>
+
 <?php
-get_sidebar();
+
 get_footer();
